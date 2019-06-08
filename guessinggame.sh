@@ -2,7 +2,7 @@
 #File: guessinggame.sh
 
 
-function guess {
+function myfunction {
 
 		local files_in_directorium=$(ls | wc -l)
 		local guess_number_of_files
@@ -15,22 +15,22 @@ function guess {
 					if [ $files_in_directorium -gt guess_number_of_files ]
 					then
 					
-							echo "That number of files is too small. "
+							echo "too low number of files. "
 							
 					else
 
-							echo "That number of files is too big. "
+							echo "too high number of files. "
 							
 					fi
 					
 		
 		
-		echo "Hey, try again: "
+		echo "please, try again: "
 		read guess_number_of_files
 		
 		echo "The number you've entered is: $guess_number_of_files ."
 		
 		done
-		echo "Congrats! You have entered the correct number of files. That number is $files_in_directorium . "
+		echo "your answer is right! "
 		
 		}
